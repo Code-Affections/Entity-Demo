@@ -8,19 +8,37 @@ namespace ConsoleApp3
         static void Main(string[] args)
         {
 
-            StudentAppDbContext ob = new StudentAppDbContext();
+            try
+            {
+                StudentAppDbContext ob = new StudentAppDbContext();
 
-            Student s1 = new Student();
-            s1.Name = "Vishnu";
-        
-            s1.MobileNo = "898989898";
+                Student s1 = new Student();
+                s1.Name = "Vishnu";
+                s1.Id = Guid.NewGuid().ToString();
+
+                s1.MobileNo = "898989898";
 
 
 
-            ob.Add(s1);//
+               /// ob.Add(s1);//
 
-            ob.SaveChanges();
-            Console.WriteLine("Hello World!");
+
+                var s=ob.Students.Find("475cbce8-84cd-4ef1-8f8d-87b241fb2343");
+
+                s.Name = "Vishnu kumar ";
+                s.MobileNo = "78787878787";
+               
+                
+                
+                
+                ob.SaveChanges();
+                Console.WriteLine("Hello World!");
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
     }
 }

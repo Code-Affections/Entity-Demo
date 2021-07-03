@@ -2,7 +2,7 @@
 
 namespace ConsoleApp3.Migrations
 {
-    public partial class Intaial : Migration
+    public partial class intial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -10,8 +10,7 @@ namespace ConsoleApp3.Migrations
                 name: "Students",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<string>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     MobileNo = table.Column<string>(nullable: true)
                 },
