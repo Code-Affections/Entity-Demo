@@ -10,6 +10,7 @@ namespace ConsoleApp3.Model
 
 
         public DbSet<Student> Students { get; set; }
+        public DbSet<Mark> MarkList { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

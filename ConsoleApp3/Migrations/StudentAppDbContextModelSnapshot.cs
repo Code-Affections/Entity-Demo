@@ -18,12 +18,34 @@ namespace ConsoleApp3.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("ConsoleApp3.Model.Mark", b =>
+                {
+                    b.Property<string>("MarkId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("M1")
+                        .HasColumnType("int");
+
+                    b.Property<int>("M2")
+                        .HasColumnType("int");
+
+                    b.Property<int>("M3")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StudentId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("MarkId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("MarkList");
+                });
+
             modelBuilder.Entity("ConsoleApp3.Model.Student", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("MobileNo")
                         .HasColumnType("nvarchar(max)");
@@ -34,6 +56,13 @@ namespace ConsoleApp3.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("ConsoleApp3.Model.Mark", b =>
+                {
+                    b.HasOne("ConsoleApp3.Model.Student", null)
+                        .WithMany("MarkList")
+                        .HasForeignKey("StudentId");
                 });
 #pragma warning restore 612, 618
         }
