@@ -24,6 +24,7 @@ namespace ConsoleApp3
                MarkId=Guid.NewGuid().ToString(),
                StudentId = s1.Id
             });
+            ob.Students.Find();
 
 
 
