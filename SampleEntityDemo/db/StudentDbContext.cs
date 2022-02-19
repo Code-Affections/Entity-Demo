@@ -13,11 +13,13 @@ namespace SampleEntityDemo.db
         
         public DbSet<Student> Students { get; set; }
         public DbSet<Employee> Employees { get; set; }
-        
+
+        public DbSet<Address> Addresses { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=Testdb1;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=Testdb3;Trusted_Connection=True;");
         }
 
     }
