@@ -20,7 +20,7 @@ namespace SampleEntityDemo
             s1.MobileNo = "7736177715";
            
 
-
+            ////
             Address a1 = new Address();
             a1.AddressId = Guid.NewGuid().ToString();  // primary
            //a1.StudentId= Guid.NewGuid().ToString();//  mistake
