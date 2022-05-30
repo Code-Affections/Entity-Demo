@@ -4,7 +4,7 @@
 
 namespace SampleEntityDemo.Migrations
 {
-    public partial class Address : Migration
+    public partial class Test : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

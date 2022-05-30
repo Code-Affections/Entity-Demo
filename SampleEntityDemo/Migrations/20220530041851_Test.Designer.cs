@@ -11,8 +11,8 @@ using SampleEntityDemo.db;
 namespace SampleEntityDemo.Migrations
 {
     [DbContext(typeof(StudentDbContext))]
-    [Migration("20220219042134_Address")]
-    partial class Address
+    [Migration("20220530041851_Test")]
+    partial class Test
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

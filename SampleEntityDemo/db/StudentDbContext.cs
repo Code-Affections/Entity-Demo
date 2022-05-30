@@ -19,7 +19,7 @@ namespace SampleEntityDemo.db
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=Testdb3;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=ZABCD_DB;Trusted_Connection=True;");
         }
 
     }

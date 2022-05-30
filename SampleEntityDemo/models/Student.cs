@@ -13,7 +13,7 @@ namespace SampleEntityDemo.db
         public string Name { get; set; }
         public string MobileNo { get; set; }
        
-        public virtual Address Addresses { get; set; }
+        public virtual Address Addresses { get; set; }= new Address();
 
       
 
